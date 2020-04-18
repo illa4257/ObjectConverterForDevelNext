@@ -58,7 +58,7 @@ $array - this is an object.
 
 1)In the project folder > src, you need to create any folder, for example: thumb, scripts, etc.
 
-2)Move the script to this folder
+2)Move the [**script**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) to this folder
 
 3)Next in the form/module/script, in the line where use add nameFolder\OC;
 ```php
@@ -123,7 +123,7 @@ $array - это массив.
 
 1)В папке проекта > src надо создать любую папку, например: thumb, scripts и т.д.
 
-2)Перемещаем скрипт в эту папку
+2)Перемещаем [**скрипт**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) в эту папку
 
 3)Далее в форме/модуле/скрипте к use приписуем nameFolder\OC;
 ```php
