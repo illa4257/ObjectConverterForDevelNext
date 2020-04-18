@@ -1,6 +1,6 @@
 # Object Converter for DevelNext
 
-If anything, the script can be changed/если что, скрипт можно изменять :-)
+If anything, the script can be changed/если что, скрипт можно изменять =)
 
 [**Документация на русском ниже.**](#russian-languageрусский-язык)
 
