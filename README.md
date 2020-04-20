@@ -62,11 +62,21 @@ $array - this is an object.
 
 ### How to put?
 
-1)In the project folder > src, you need to create any folder, for example: thumb, scripts, etc.
+#### 1 way with a [**bundle**](https://github.com/illa4257/ObjectConverterForDevelNext/releases)
 
-2)Move the [**script**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) to this folder
+##### 1)Open DevelNext
 
-3)Next in the form/module/script, in the line where use add nameFolder\OC;
+##### 2)Open any project
+
+##### 3)Go to the Project tab> Packages and click on "Add Package from File" and find [**.dnbundle**](https://github.com/illa4257/ObjectConverterForDevelNext/releases)
+
+#### 2 way with a [**script**](https://github.com/illa4257/ObjectConverterForDevelNext/releases)
+
+##### 1)In the project folder > src, you need to create any folder, for example: thumb, scripts, etc.
+
+##### 2)Move the [**script**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) to this folder
+
+##### 3)Next in the form/module/script, in the line where use add nameFolder\OC;
 ```php
 use nameFolder\OC;
 ```
@@ -127,11 +137,21 @@ $array - это массив.
 
 ### Как поставить?
 
-1)В папке проекта > src надо создать любую папку, например: thumb, scripts и т.д.
+#### 1 способ с [**пакетом**](https://github.com/illa4257/ObjectConverterForDevelNext/releases)
 
-2)Перемещаем [**скрипт**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) в эту папку
+##### 1)Открываете DevelNext
 
-3)Далее в форме/модуле/скрипте к use приписуем nameFolder\OC;
+##### 2)Открываете любой проект
+
+##### 3)Заходите во вкладку проект > Пакеты и нажимаете на "Добавить пакет из файла" и находите .dnbundle
+
+#### 2 способ со [**скриптом**](https://github.com/illa4257/ObjectConverterForDevelNext/releases)
+
+##### 1)В папке проекта > src надо создать любую папку, например: thumb, scripts и т.д.
+
+##### 2)Перемещаем [**скрипт**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) в эту папку
+
+##### 3)Далее в форме/модуле/скрипте к use приписуем nameFolder\OC;
 ```php
 use nameFolder\OC;
 ```
