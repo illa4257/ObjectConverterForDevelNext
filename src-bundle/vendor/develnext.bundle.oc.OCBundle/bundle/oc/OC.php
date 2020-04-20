@@ -1,0 +1,120 @@
+<?php
+namespace bundle\oc;
+
+use std, gui, framework, app;
+use Exception;
+use facade\Json;
+
+class OC 
+{
+
+    public static function objToArr($obj){
+        $objArr = [];
+        $objArr['class'] = get_class($obj);
+        $l = arr::keys(get_class_vars($obj));
+        $arr = [];
+        $i = 0;
+        while($l[$i]!=null){
+            $key = $l[$i];
+            $value = $obj->$key;
+            $type = gettype($value);
+            if($type=='string' or $type=='boolean' or $type=='double' or $type=='array' or $type=='integer'){
+                if($type=='boolean' and $value!=true)
+                    $value = false;
+                $arr[$key] = $value;
+            }elseif($type=='object'){
+                $class = get_class($value);
+                if($class!='php\gui\text\UXFont' and $class!='php\gui\paint\UXColor'){
+                    if($key!='root' and $key!='window' and $key!='scene' and $key!='layout' and $key!='form'){
+                        try {
+                            $arr[$key] = OC::objToArr($value);
+                        } catch (Exception $e) {
+                            Logger::error($key . '/' . $class . ':Произошла ошибка - ' . $e->getMessage());
+                        }
+                    }
+                }else{
+                    if($class=='php\gui\paint\UXColor'){
+                        $arr[$key] = $value->getWebValue();
+                    }elseif($class=='php\gui\text\UXFont'){
+                        $arr[$key] = ['class' => 'php\gui\text\UXFont', 'classVars' => [
+                            'name' => $value->name,
+                            'family' => $value->family,
+                            'size' => $value->size,
+                            'style' => $value->style]
+                        ];
+                    }
+                }
+            }elseif($type=='NULL'){
+                $arr[$key] = null;
+            }else{
+                Logger::info($type);
+                var_dump($value);
+            }
+            $i++;
+        }
+        $objArr['classVars'] = $arr;
+        return $objArr;
+    }
+    
+    public static function arrToObj($arr){
+        
+        if($arr['class']=='php\gui\text\UXFont'){
+            $args = $arr['classVars'];
+            if(str::contains($args['style'], 'Bold')){
+                $arg1 = 'BOLD';
+            }else{
+                $arg1 = 'THIN';
+            }
+            if(str::contains($args['style'], 'Italic')){
+                $arg2 = true;
+            }else{
+                $arg2 = false;
+            }
+            $obj = UXFont::of($args['name'], $args['size'], $arg1, $arg2);
+        }else{
+            $obj = new $arr['class'];
+            $keys = arr::keys($arr['classVars']);
+            $i = 0;
+            while($keys[$i]!=null){
+                $key = $keys[$i];
+                $value = $arr['classVars'][$key];
+                $type = gettype($value);
+                if($key!='armed' and $key!='stylesheets' and $key!='childrenUnmodifiable' and $key!='disabled' and $key!='focused'
+                and $key!='pressed' and $key!='hover' and $key!='classes' and $key!='baselineOffset' and $key!='children'
+                and $key!='layoutBounds' and $key!='boundsInParent' and $key!='screenPosition' and $key!='screenX' and $key!='screenY'
+                and $key!='effects' and $key!='parent' and $key!='name' and $key!='size' and $key!='family' and $key!='bold'
+                and $key!='lineHeight' and $key!='italic' and $key!='resizable' and $key!='prefSize' and $key!='indeterminate')
+                if($type=='string' or $type=='double' or $type=='boolean' or $type=='integer'){
+                    $obj->$key = $value;
+                }elseif($type=='array'){
+                    if(OC::isObjArr($value)){
+                        $obj->$key = OC::arrToObj($value);
+                    }else{
+                        $obj->$key = $value;
+                    }
+                }elseif($type=='NULL'){
+                    
+                }else{
+                    Logger::info($key . ':' . $value . ' - ' . $type);
+                }
+                $i++;
+            }
+        }
+        return $obj;
+    }
+    
+    public static function objToJson($obj){
+        return Json::encode(OC::objToArr($obj));
+    }
+    
+    public static function jsonToObj($json){
+        return OC::arrToObj(Json::decode($json));
+    }
+    
+    public static function isObjArr($arr){
+        if(gettype($arr)=='array' and $arr['class']!=null){
+            return true;
+        }
+        return false;
+    }
+}
