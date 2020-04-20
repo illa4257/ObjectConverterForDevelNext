@@ -62,7 +62,7 @@ $array - this is an object.
 
 ### How to put?
 
-#### 1 way with a [**bundle**](https://github.com/illa4257/ObjectConverterForDevelNext/releases)
+#### 1 way with a [**bundle**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) (dn-oc-bundle.dnbundle)
 
 ##### 1)Open DevelNext
 
@@ -70,7 +70,7 @@ $array - this is an object.
 
 ##### 3)Go to the Project tab> Packages and click on "Add Package from File" and find [**.dnbundle**](https://github.com/illa4257/ObjectConverterForDevelNext/releases)
 
-#### 2 way with a [**script**](https://github.com/illa4257/ObjectConverterForDevelNext/releases)
+#### 2 way with a [**script**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) (OC.php)
 
 ##### 1)In the project folder > src, you need to create any folder, for example: thumb, scripts, etc.
 
@@ -137,7 +137,7 @@ $array - это массив.
 
 ### Как поставить?
 
-#### 1 способ с [**пакетом**](https://github.com/illa4257/ObjectConverterForDevelNext/releases)
+#### 1 способ с [**пакетом**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) (dn-oc-bundle.dnbundle)
 
 ##### 1)Открываете DevelNext
 
@@ -145,7 +145,7 @@ $array - это массив.
 
 ##### 3)Заходите во вкладку проект > Пакеты и нажимаете на "Добавить пакет из файла" и находите .dnbundle
 
-#### 2 способ со [**скриптом**](https://github.com/illa4257/ObjectConverterForDevelNext/releases)
+#### 2 способ со [**скриптом**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) (OC.php)
 
 ##### 1)В папке проекта > src надо создать любую папку, например: thumb, scripts и т.д.
 
