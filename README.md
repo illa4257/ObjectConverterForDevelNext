@@ -1,6 +1,6 @@
 # Object Converter for DevelNext
 
-![Image alt](https://github.com/illa4257/ObjectConverterForDevelNext/blob/master/splash.png)
+![Splash](https://github.com/illa4257/ObjectConverterForDevelNext/blob/master/splash.png)
 
 If anything, the script can be changed/если что, скрипт можно изменять =)
 
