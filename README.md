@@ -2,7 +2,15 @@
 
 ![Splash](https://github.com/illa4257/ObjectConverterForDevelNext/blob/master/splash.png)
 
-If anything, the script can be changed/если что, скрипт можно изменять =)
+## About Converter/О конверторе
+
+Object Converter for DevelNext/Конвертер объектов для DevelNext.
+
+You can convert to: array and JSON.
+
+Вы можете конверитировать в: массив и JSON.
+
+If anything, the [**script**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) can be changed/если что, [**скрипт**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) можно изменять =)
 
 [**Документация на русском ниже.**](#russian-languageрусский-язык)
 
