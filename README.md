@@ -80,7 +80,7 @@ $array - this is an object.
 
 #### 2 way with a [**script**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) (OC.php)
 
-##### 1)In the project folder > src, you need to create any folder, for example: thumb, scripts, etc.
+##### 1)In the project folder > src, you need to create any folder, for example: thumb, scripts, etc.(If the folder name is not scripts, then inside the php file, you need to change "namespace scripts;"  on "namespace folderName;")
 
 ##### 2)Move the [**script**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) to this folder
 
@@ -155,7 +155,7 @@ $array - это массив.
 
 #### 2 способ со [**скриптом**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) (OC.php)
 
-##### 1)В папке проекта > src надо создать любую папку, например: thumb, scripts и т.д.
+##### 1)В папке проекта > src надо создать любую папку, например: thumb, scripts и т.д.(Если имя папки не scripts, то внутри php-файла, надо поменять "namespace scripts;" на "namespace имяПапки;")
 
 ##### 2)Перемещаем [**скрипт**](https://github.com/illa4257/ObjectConverterForDevelNext/releases) в эту папку
 
