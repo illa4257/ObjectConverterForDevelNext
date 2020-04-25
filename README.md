@@ -24,14 +24,14 @@ Its minus is that it does not convert all functions and data into objects, but o
 $array = [
   'class' => 'php\gui\UXButton',
   'classVars' => [
-    'param1' => 'text',
-    'param2' => [],
-    'param3' => 123,
-    'param4' => true
+    'variable1' => 'text',
+    'variable2' => [],
+    'variable3' => 123,
+    'variable4' => true
   ]
 ];
 
-$array['classVars']['nameParam'] = 'value'; // nameParam - name property, value - value property.
+$array['classVars']['nameVariable'] = 'value'; // nameVariable - name property, value - value property.
 ```
 
 ### How to use?
@@ -99,10 +99,10 @@ use nameFolder\OC;
 $array = [
   'class' => 'php\gui\UXButton',
   'classVars' => [
-    'param1' => 'текст',
-    'param2' => [],
-    'param3' => 123,
-    'param4' => true
+    'переменная1' => 'текст',
+    'переменная2' => [],
+    'переменная3' => 123,
+    'переменная4' => true
   ]
 ];
 
