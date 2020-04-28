@@ -5,9 +5,24 @@ use std, gui, framework, app;
 use Exception;
 use facade\Json;
 
+/**
+ * Class Object Converter
+ * 
+ * --RU--
+ * Класс Конвертора для объектов
+ *
+ */
 class OC 
 {
 
+    /**
+     * Object to array
+     * --RU--
+     * Объект в массив
+     *
+     * @param $obj
+     * @return array
+     */
     public static function objToArr($obj){
         $objArr = [];
         $objArr['class'] = get_class($obj);
@@ -56,6 +71,26 @@ class OC
         return $objArr;
     }
     
+    /**
+     * Object to json
+     * --RU--
+     * Объект в json
+     *
+     * @param $obj
+     * @return Json
+     */
+    public static function objToJson($obj){
+        return Json::encode(OC::objToArr($obj));
+    }
+	
+	/**
+     * Array to object
+     * --RU--
+     * Массив в объект
+     *
+     * @param $arr
+     * @return Object
+     */
     public static function arrToObj($arr){
         
         if($arr['class']=='php\gui\text\UXFont'){
@@ -102,19 +137,43 @@ class OC
         }
         return $obj;
     }
-    
-    public static function objToJson($obj){
-        return Json::encode(OC::objToArr($obj));
-    }
-    
+	
+	/**
+     * Json to object
+     * --RU--
+     * Json в объект
+     *
+     * @param $json
+     * @return Object
+     */
     public static function jsonToObj($json){
         return OC::arrToObj(Json::decode($json));
     }
     
+    /**
+     * Checks if an object can be created from an array
+     * --RU--
+     * Проверяет, может ли объект быть создан из массива
+     *
+     * @param $arr
+     * @return bool
+     */
     public static function isObjArr($arr){
         if(gettype($arr)=='array' and $arr['class']!=null){
             return true;
         }
         return false;
+    }
+    
+    /**
+     * Checks if an object can be created from json
+     * --RU--
+     * Проверяет, может ли объект быть создан из json
+     *
+     * @param $json
+     * @return bool
+     */
+    public static function isObjJson($json){
+        return OC::isObjArr(Json::decode($json));
     }
 }
