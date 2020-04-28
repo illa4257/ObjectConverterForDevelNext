@@ -36,11 +36,12 @@ $array['classVars']['nameVariable'] = 'value'; // nameVariable - name property, 
 
 ### How to use?
 * Class OC
-  - [**OC::isObjArr($object) : Array**](#ocobjtoarrobject--array)
+  - [**OC::objToArr($object) : Array**](#ocobjtoarrobject--array)
   - [**OC::objToJson($object) : Json**](#ocobjtojsonobject--json)
   - [**OC::arrToObj($array) : Object**](#ocarrtoobjarray--object)
   - [**OC::jsonToObj($json) : Object**](#ocjsontoobjjson--object)
   - [**OC::isObjArr($array) : Boolean**](#ocisobjarrarray--boolean)
+  - [**OC::isObjJson($json) : Boolean**](#ocisobjjsonjson--boolean)
 
 #### OC::objToArr($object) : Array
 
@@ -67,6 +68,10 @@ Performs the same as [**OC::arrToObj($array) : $object**](#ocarrtoobjarray--obje
 Returns true or false if the array is a transformed object.
 
 $array - this is an object.
+
+#### OC::isObjJson($json) : Boolean
+
+Performs the same as [**OC::isObjArr($array) : Boolean**](#ocisobjarrarray--boolean) only instead of json array.
 
 ### How to put?
 
