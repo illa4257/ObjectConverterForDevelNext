@@ -51,7 +51,7 @@ $object - this is an object
 
 #### OC::objToJson($object) : Json
 
-Performs the same as [**OC::objToArr($object) : $array**](#ocobjtoarrobject--array) only instead of json array.
+Performs the same as [**OC::objToArr($object) : Array**](#ocobjtoarrobject--array) only instead of json array.
 
 #### OC::arrToObj($array) : Object
 
@@ -61,7 +61,7 @@ $object - this is an object.
 
 #### OC::jsonToObj($json) : Object
 
-Performs the same as [**OC::arrToObj($array) : $object**](#ocarrtoobjarray--object) only instead of json array.
+Performs the same as [**OC::arrToObj($array) : Object**](#ocarrtoobjarray--object) only instead of json array.
 
 #### OC::isObjArr($array) : Boolean
 
@@ -116,11 +116,12 @@ $array['classVars']['имя переменной'] = 'значение'; // им
 
 ### Как пользоваться?
 * Класс OC
-  - [**OC::isObjArr($object) : Array**](#ru-ocobjtoarrobject--array)
+  - [**OC::objToArr($object) : Array**](#ru-ocobjtoarrobject--array)
   - [**OC::objToJson($object) : Json**](#ru-ocobjtojsonobject--json)
   - [**OC::arrToObj($array) : Object**](#ru-ocarrtoobjarray--object)
   - [**OC::jsonToObj($json) : Object**](#ru-ocjsontoobjjson--object)
   - [**OC::isObjArr($array) : Boolean**](#ru-ocisobjarrarray--boolean)
+  - [**OC::isObjJson($json) : Boolean**](#ru-ocisobjjsonjson--boolean)
 
 #### (ru) OC::objToArr($object) : Array
 
@@ -130,7 +131,7 @@ $object - это объект
 
 #### (ru) OC::objToJson($object) : Json
 
-Выполняет тоже самое что и [**OC::objToArr($object) : $array**](#ru-ocobjtoarrobject--array) только вместо массива json.
+Выполняет тоже самое что и [**OC::objToArr($object) : Array**](#ru-ocobjtoarrobject--array) только вместо массива json.
 
 #### (ru) OC::arrToObj($array) : Object
 
@@ -140,13 +141,17 @@ $object - это объект
 
 #### (ru) OC::jsonToObj($json) : Object
 
-Выполняет тоже самое что и [**OC::arrToObj($array) : $object**](#ru-ocarrtoobjarray--object) только вместо массива json.
+Выполняет тоже самое что и [**OC::arrToObj($array) : Object**](#ru-ocarrtoobjarray--object) только вместо массива json.
 
 #### (ru) OC::isObjArr($array) : Boolean
 
 Возвращает true или false, если массив это преобразованный объект.
 
 $array - это массив.
+
+#### (ru) OC::isObjJson($json) : Boolean
+
+Выполняет тоже самое что и [**OC::isObjArr($array) : Boolean**](#ru-ocarrtoobjarray--object) только вместо массива json.
 
 ### Как поставить?
 
