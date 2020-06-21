@@ -3,7 +3,11 @@ description=Converter object to array or array to object.\nGitHub repository and
 descriptionFile=develnext/bundle/oc/description.html
 group=other
 icon=develnext/bundle/oc/oc.png
-
 class=develnext\\bundle\\oc\\OCBundle
 author=illa4257
 version=0.3
+type=without
+ID=OC
+tabs=[]
+automaticallyEnterClassList=true
+
