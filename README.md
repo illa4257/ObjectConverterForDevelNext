@@ -151,7 +151,7 @@ $array - это массив.
 
 #### (ru) OC::isObjJson($json) : Boolean
 
-Выполняет тоже самое что и [**OC::isObjArr($array) : Boolean**](#ru-ocarrtoobjarray--object) только вместо массива json.
+Выполняет тоже самое что и [**OC::isObjArr($array) : Boolean**](#ru-ocisobjarrarray--boolean) только вместо массива json.
 
 ### Как поставить?
 
